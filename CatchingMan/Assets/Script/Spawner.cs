@@ -4,16 +4,13 @@ using System.Collections;
 public class Spawner : MonoBehaviour {
 
 	private float BeginTime ;
-	private float CurrentX, CurrentY;
 
-	public float SpawnTime = 1.5;
+	public float SpawnTime = 2;
 	public GameObject[] objList;
 
 	// Use this for initialization
 	void Start () {
 		BeginTime = Time.time;
-		CurrentX = transform.position.x;
-		CurrentY = transform.position.y;
 	}
 	
 	// Update is called once per frame
@@ -24,7 +21,7 @@ public class Spawner : MonoBehaviour {
 				CreateAObj();
 			}
 		}
-		ShiftPosition ();
+
 	}
 
 	private void CreateAObj(){
@@ -33,14 +30,5 @@ public class Spawner : MonoBehaviour {
 		newObj.transform.position = transform.position;
 		
 		BeginTime = Time.time;
-	}
-	
-	private void ShiftPosition(){
-		if (transform.position.x > 5) {
-				
-		} else {
-			//transform.position.Set();
-		}
-
 	}
 }
