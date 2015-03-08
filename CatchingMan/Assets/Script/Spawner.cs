@@ -6,10 +6,10 @@ public class Spawner : MonoBehaviour {
 	private float Distance;
 	private float BeginTime ;
 
-	public float SpawnTime = 2;
+	public float SpawnTime = 3;
 	public GameObject[] objList;
 	public float MoveSpeed = 2;
-	private  int MAX_CREATE_COUNT = 8;
+	public  int MAX_CREATE_COUNT = 3;
 
 	// Use this for initialization
 	void Start () {
