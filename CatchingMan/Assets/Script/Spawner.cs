@@ -9,6 +9,7 @@ public class Spawner : MonoBehaviour {
 	public float SpawnTime = 2;
 	public GameObject[] objList;
 	public float MoveSpeed = 2;
+	private  int MAX_CREATE_COUNT = 8;
 
 	// Use this for initialization
 	void Start () {
@@ -22,7 +23,7 @@ public class Spawner : MonoBehaviour {
 		shiftPos ();
 
 		if((Time.time-BeginTime)>SpawnTime){
-			int rCount = Random.Range(1,10);
+			int rCount = Random.Range(1,MAX_CREATE_COUNT);
 			for(int i=0;i<rCount;i++){
 				CreateAObj();
 			}
