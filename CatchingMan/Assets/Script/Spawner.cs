@@ -3,18 +3,24 @@ using System.Collections;
 
 public class Spawner : MonoBehaviour {
 
+	private float Distance;
 	private float BeginTime ;
 
 	public float SpawnTime = 2;
 	public GameObject[] objList;
+	public float MoveSpeed = 2;
 
 	// Use this for initialization
 	void Start () {
+		Distance = Camera.main.orthographicSize * Camera.main.aspect * 2 * 0.9f;
 		BeginTime = Time.time;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+		shiftPos ();
+
 		if((Time.time-BeginTime)>SpawnTime){
 			int rCount = Random.Range(1,10);
 			for(int i=0;i<rCount;i++){
@@ -22,6 +28,11 @@ public class Spawner : MonoBehaviour {
 			}
 		}
 
+	}
+
+	private void shiftPos(){
+		float newPos = Mathf.PingPong (Time.time*MoveSpeed,Distance) - (Distance/2);
+		transform.position = new Vector3 (newPos,transform.position.y,transform.position.z);
 	}
 
 	private void CreateAObj(){
