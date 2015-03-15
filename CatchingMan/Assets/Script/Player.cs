@@ -3,16 +3,18 @@ using System.Collections;
 
 public class Player : MonoBehaviour {
 
-	public static float 
 
-	private Vector3 StartPos, EndPos;
+	private	Vector3 StartPos ;
+	private Vector3 EndPos ;
 	private bool _IsMouseDown = false;
 	private GameObject bucket;
 	private bool isMoveRight = true;
+	private Animator selfAnimator;
 
 	// Use this for initialization
 	void Start () {
 		bucket = GameObject.Find ("woodbucket");
+		selfAnimator = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -27,6 +29,7 @@ public class Player : MonoBehaviour {
 		}
 		if(_IsMouseDown){
 			EndPos = Input.mousePosition;
+			selfAnimator.SetBool("isRun",false);
 			DetectGuesture();
 		}
 
@@ -44,6 +47,8 @@ public class Player : MonoBehaviour {
 	}
 
 	private void DetectGuesture(){
+
+	
 		Vector3 p1 = Camera.main.ScreenToWorldPoint (StartPos);
 		Vector3 p2 = Camera.main.ScreenToWorldPoint (EndPos);
 		float len = (p2.x - p1.x)*2;
@@ -61,12 +66,14 @@ public class Player : MonoBehaviour {
 	}
 
 	private void updateMoveFlag(float len){
-		if (Mathf.Abs (len) > 0.9f) {
+		if (Mathf.Abs (len) > 0.2f) {
 			if(len > 0){
 				isMoveRight = true;
 			}else if(len <0){
 				isMoveRight = false;
 			}
+
+			selfAnimator.SetBool("isRun",true);
 		}
 	}
 }
