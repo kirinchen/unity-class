@@ -27,6 +27,7 @@ public class Spawner : MonoBehaviour {
 			for(int i=0;i<rCount;i++){
 				CreateAObj();
 			}
+			audio.Play();
 		}
 
 	}

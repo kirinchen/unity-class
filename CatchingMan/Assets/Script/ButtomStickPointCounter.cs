@@ -19,6 +19,7 @@ public class ButtomStickPointCounter : MonoBehaviour {
 		Destroy (collider.gameObject);
 		//var objPos = collider.gameObject.transform.position;
 		//objPos.Set(objPos.x, -2, objPos.z);
+		audio.Play ();
 	}
 
 

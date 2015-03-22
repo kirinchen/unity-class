@@ -51,8 +51,10 @@
      <Compile Include="Assets\Script\OnOutCameraHandler.cs" />
      <Compile Include="Assets\Script\Player.cs" />
      <Compile Include="Assets\Script\Scene.cs" />
+     <Compile Include="Assets\Script\Score.cs" />
      <Compile Include="Assets\Script\Spawner.cs" />
      <Compile Include="Assets\Script\StickEvent.cs" />
+     <Compile Include="Assets\Script\WoodBucket.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

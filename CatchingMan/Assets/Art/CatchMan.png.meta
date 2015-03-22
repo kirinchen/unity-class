@@ -1,0 +1,171 @@
+fileFormatVersion: 2
+guid: a1eb8ea94648fcd48943e6bc130e6004
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: CatchMan_LHand
+    21300002: CatchMan_LEyeSkin
+    21300004: CatchMan_REyeSkin
+    21300006: CatchMan_Rhand
+    21300008: CatchMan_Body
+    21300010: CatchMan_LEyeBall
+    21300012: CatchMan_REyeBall
+    21300014: CatchMan_LEye
+    21300016: CatchMan_REye
+    21300018: CatchMan_Lfoot
+    21300020: CatchMan_RFoot
+    21300022: CatchMan_RHand
+    21300024: CatchMan_Head
+    21300026: CatchMan_LFoot
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: CatchMan_LHand
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 363
+        width: 113
+        height: 183
+      alignment: 9
+      pivot: {x: .920595706, y: .0909535587}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatchMan_LEyeSkin
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 532
+        width: 43
+        height: 23
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatchMan_REyeSkin
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 532
+        width: 43
+        height: 23
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatchMan_RHand
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 360
+        width: 112
+        height: 182
+      alignment: 9
+      pivot: {x: .0862582102, y: .0952346325}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatchMan_Head
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 203
+        width: 175
+        height: 293
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatchMan_LEyeBall
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 217
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatchMan_REyeBall
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 217
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatchMan_REye
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 95
+        width: 52
+        height: 49
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatchMan_LEye
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 108
+        width: 52
+        height: 49
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatchMan_LFoot
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 0
+        width: 65
+        height: 89
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatchMan_RFoot
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 11
+        width: 64
+        height: 88
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
