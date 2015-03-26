@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using WebSocketSharp;
 
 public class Scene : MonoBehaviour {
 
@@ -7,7 +8,7 @@ public class Scene : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		SetupWall ();
+
 	}
 	
 	// Update is called once per frame
@@ -16,6 +17,7 @@ public class Scene : MonoBehaviour {
 			Application.Quit();
 		}
 	}
+
 
 	private void SetupWall(){
 		float Distance = Camera.main.orthographicSize * Camera.main.aspect * 1.1f;
