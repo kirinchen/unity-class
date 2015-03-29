@@ -19,6 +19,8 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		checkGameOver ();
+
 		if(Input.GetMouseButtonDown(0)){
 
 			StartPos = Input.mousePosition;
@@ -34,6 +36,14 @@ public class Player : MonoBehaviour {
 		}
 
 		updatePlayerMoveStyle ();
+	}
+
+	private void checkGameOver(){
+		float r = transform.rotation.z;
+		r = Mathf.Abs (r);
+		if(r>0.61f){
+			Application.LoadLevel ("GameOver");
+		}
 	}
 
 	private void updatePlayerMoveStyle(){

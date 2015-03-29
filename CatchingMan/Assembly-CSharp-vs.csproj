@@ -49,6 +49,8 @@
      <Compile Include="Assets\Script\ButtomObjectDestryer.cs" />
      <Compile Include="Assets\Script\ButtomStickPointCounter.cs" />
      <Compile Include="Assets\Script\FruitValue.cs" />
+     <Compile Include="Assets\Script\IconResize.cs" />
+     <Compile Include="Assets\Script\NumResize.cs" />
      <Compile Include="Assets\Script\Player.cs" />
      <Compile Include="Assets\Script\Scene.cs" />
      <Compile Include="Assets\Script\Score.cs" />
