@@ -36,6 +36,17 @@ public class ButtomStickPointCounter : MonoBehaviour {
 
 	private void setupLevelComplete(){
 		int isMaxConditionCount = 0;
+		for(int i=0;i<conditions.Length;i++){
+			GameObject group = conditions[i];
+			GameObject num = getGroupGameObject (group,"Num");
+			bool b = num.GetComponent<NumResize>().isLimt();
+			if(b){
+				isMaxConditionCount++;
+			}
+		}
+		if(isMaxConditionCount >= conditions.Length){
+			doLevelComplete();
+		}
 	}
 
 	private void calcConditions(GameObject colliderO ){
@@ -43,7 +54,6 @@ public class ButtomStickPointCounter : MonoBehaviour {
 		for(int i=0;i<conditions.Length;i++){
 			GameObject group = conditions[i];
 			calcCondition(colliderO,group);
-
 		}
 	}
 
@@ -52,6 +62,8 @@ public class ButtomStickPointCounter : MonoBehaviour {
 	private void doLevelComplete(){
 		GameObject lc = GameObject.Find ("LevelComplete");
 		lc.rigidbody2D.isKinematic = false;
+		GameObject lcs = GameObject.Find ("LevelCompleteStop");
+		lcs.collider2D.enabled = true;
 	}
 
 	private void calcCondition(GameObject colliderO,GameObject group){
@@ -64,11 +76,10 @@ public class ButtomStickPointCounter : MonoBehaviour {
 
 	}
 
-	static public GameObject getGroupGameObject(GameObject fromGameObject, string withName) {
+	public GameObject getGroupGameObject(GameObject fromGameObject, string withName) {
 		Transform ts = fromGameObject.transform.Find (withName);
 		return (GameObject)ts.gameObject;
 	}
-
 
 	private void calcScore(GameObject go){
 
