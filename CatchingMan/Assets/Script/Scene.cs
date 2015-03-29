@@ -21,7 +21,7 @@ public class Scene : MonoBehaviour {
 
 		//GameObject Wall = GameObject.Find ("Wall");
 		Debug.Log (Wall);
-		float Distance = Camera.main.orthographicSize * Camera.main.aspect * 1.25f;
+		float Distance = Camera.main.orthographicSize * Camera.main.aspect * 1.4f;
 		GameObject leftWall = Instantiate(Wall) as GameObject;
 		leftWall.transform.position = new Vector3 (-Distance,0,0);
 		GameObject rightWall = Instantiate(Wall) as GameObject;
