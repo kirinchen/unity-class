@@ -17,6 +17,8 @@ public class StartButtonListener : MonoBehaviour {
 	}
 
 	void OnMouseUp(){
+		PlayerPrefs.SetInt ("LEVEL",1);
+		PlayerPrefs.SetInt ("TOTAL_SCORE",0);
 		GetComponent<SpriteRenderer> ().sprite = buutonUpImg;
 		Application.LoadLevel ("Level01");
 	}

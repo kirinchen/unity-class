@@ -11,14 +11,21 @@ public class Spawner : MonoBehaviour {
 	public float MoveSpeed = 2;
 	private  int MAX_CREATE_COUNT = 1;
 
+	private Scene scene;
+
 	// Use this for initialization
 	void Start () {
 		Distance = Camera.main.orthographicSize * Camera.main.aspect * 2 * 0.9f;
 		BeginTime = Time.time;
+		scene = GameObject.Find ("Scene").GetComponent<Scene> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+		if(scene.levelComplated){
+			return;
+		}
 
 		shiftPos ();
 

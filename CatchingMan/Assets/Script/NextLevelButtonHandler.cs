@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FruitValue : MonoBehaviour {
+public class NextLevelButtonHandler : MonoBehaviour {
 
-	public int Value = 10;
 	private Scene scene;
 
 	// Use this for initialization
@@ -13,9 +12,12 @@ public class FruitValue : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(scene.levelComplated){
-			Destroy (this.gameObject);
-			Destroy (this);
-		}
+
+	}
+
+	void OnMouseDown(){
+		Application.LoadLevel ("Level01");
+		int l = PlayerPrefs.GetInt ("LEVEL") + 1;
+		PlayerPrefs.SetInt ("LEVEL",l);
 	}
 }

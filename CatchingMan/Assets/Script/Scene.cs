@@ -4,6 +4,7 @@ using System.Collections;
 public class Scene : MonoBehaviour {
 
 	public GameObject Wall;
+	public bool levelComplated = false;
 
 	// Use this for initialization
 	void Start () {

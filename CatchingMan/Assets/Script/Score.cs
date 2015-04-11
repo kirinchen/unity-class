@@ -9,7 +9,8 @@ public class Score : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		guiText.fontSize = Screen.height / 10;
-	
+		TotalScore = PlayerPrefs.GetInt ("TOTAL_SCORE");
+
 	}
 
 

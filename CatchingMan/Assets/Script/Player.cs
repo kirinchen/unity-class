@@ -36,7 +36,10 @@ public class Player : MonoBehaviour {
 		}
 
 		updatePlayerMoveStyle ();
+
 	}
+
+
 
 	private void checkGameOver(){
 		float r = transform.rotation.z;

@@ -60,10 +60,8 @@ public class ButtomStickPointCounter : MonoBehaviour {
 
 
 	private void doLevelComplete(){
-		GameObject lc = GameObject.Find ("LevelComplete");
-		lc.rigidbody2D.isKinematic = false;
-		GameObject lcs = GameObject.Find ("LevelCompleteStop");
-		lcs.collider2D.enabled = true;
+		GameObject.Find ("Scene").GetComponent<Scene> ().levelComplated = true;
+		PlayerPrefs.SetInt ("TOTAL_SCORE",score.TotalScore);
 	}
 
 	private void calcCondition(GameObject colliderO,GameObject group){
