@@ -8,7 +8,7 @@ public class NumResize : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		float h = Screen.height / 10 * 0.8f;
+		float h = Screen.height / 10 * 0.7f;
 		guiText.fontSize = (int)h;
 		showCount();
 	}
@@ -29,7 +29,7 @@ public class NumResize : MonoBehaviour {
 		return currentCount >= maxCount;
 	}
 
-	private void showCount(){
+	public void showCount(){
 		guiText.text = maxCount +"/"+currentCount;
 	}
 }

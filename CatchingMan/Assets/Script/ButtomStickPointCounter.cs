@@ -7,10 +7,11 @@ public class ButtomStickPointCounter : MonoBehaviour {
 	Score score = null;
 
 
-	public GameObject[] conditions ;
+	private GameObject[] conditions ;
 
 	// Use this for initialization
 	void Start () {
+		conditions = GameObject.Find ("Scene").GetComponent<Scene> ().conditions;
 		score = GameObject.Find ("Score").GetComponent<Score> ();
 		//doLevelComplete ();
 		
