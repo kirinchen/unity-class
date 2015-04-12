@@ -13,7 +13,7 @@ public class FruitValue : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(scene.levelComplated){
+		if(scene.levelComplated || scene.gameOvered) {
 			Destroy (this.gameObject);
 			Destroy (this);
 		}

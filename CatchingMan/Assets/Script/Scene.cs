@@ -5,6 +5,7 @@ public class Scene : MonoBehaviour {
 
 	public GameObject Wall;
 	public bool levelComplated = false;
+	public bool gameOvered = false;
 
 	public GameObject[] conditions ;
 

@@ -3,12 +3,14 @@ using System.Collections;
 
 public class TimeCounter : MonoBehaviour {
 
-	private int gameMaxTime = 90;
+	private int gameMaxTime = 10;
 	private float startTime;
+	private Scene scene;
 
 
 	// Use this for initialization
 	void Start () {
+		scene = GameObject.Find ("Scene").GetComponent<Scene> ();
 		startTime = Time.time;
 		float h = Screen.height / 15 * 0.8f;
 		guiText.fontSize = (int)h;
@@ -17,8 +19,16 @@ public class TimeCounter : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(scene.gameOvered && scene.levelComplated){
+			return;
+		}
 		int prieod = (int)(Time.time - startTime);
-		setTimeCount (gameMaxTime - prieod);
+		int finalT = gameMaxTime - prieod;
+		if(finalT <=0){
+			finalT = 0;
+			scene.gameOvered = true;
+		}
+		setTimeCount (finalT);
 	}
 
 	private void setTimeCount(int t){

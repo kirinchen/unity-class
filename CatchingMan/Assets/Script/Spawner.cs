@@ -23,7 +23,7 @@ public class Spawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if(scene.levelComplated){
+		if(scene.levelComplated || scene.gameOvered){
 			return;
 		}
 
