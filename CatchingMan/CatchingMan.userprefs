@@ -1,12 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Player.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\TimeCounter.cs">
     <Files>
-      <File FileName="Assets\Script\LevelComplete.cs" Line="25" Column="1" />
-      <File FileName="Assets\Script\GameoverLabelController.cs" Line="26" Column="16" />
-      <File FileName="Assets\Script\TimeCounter.cs" Line="6" Column="29" />
-      <File FileName="Assets\Script\ButtomStickPointCounter.cs" Line="30" Column="25" />
-      <File FileName="Assets\Script\Player.cs" Line="27" Column="24" />
+      <File FileName="Assets\Script\LevelComplete.cs" Line="20" Column="32" />
+      <File FileName="Assets\Script\GameoverLabelController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\TimeCounter.cs" Line="8" Column="22" />
+      <File FileName="Assets\Script\ButtomStickPointCounter.cs" Line="17" Column="60" />
+      <File FileName="Assets\Script\Player.cs" Line="1" Column="1" />
+      <File FileName="Assets\TestScript\TestCollider.cs" Line="1" Column="1" />
+      <File FileName="Assets\TestScript\TestFource.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Point.cs" Line="20" Column="53" />
+      <File FileName="Assets\Script\Scene.cs" Line="17" Column="3" />
+      <File FileName="Assets\Script\Spawner.cs" Line="49" Column="63" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

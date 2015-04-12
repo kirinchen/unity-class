@@ -4,16 +4,18 @@ using System.Collections;
 
 public class ButtomStickPointCounter : MonoBehaviour {
 
-	Score score = null;
+	private Score score = null;
 
+	private TimeCounter timeCounter;
 
 	private GameObject[] conditions ;
+	public GameObject pointObject;
 
 	// Use this for initialization
 	void Start () {
 		conditions = GameObject.Find ("Scene").GetComponent<Scene> ().conditions;
 		score = GameObject.Find ("Score").GetComponent<Score> ();
-		//doLevelComplete ();
+		timeCounter = GameObject.Find ("TimeConter").GetComponent<TimeCounter> ();
 		
 	}
 	
@@ -85,6 +87,10 @@ public class ButtomStickPointCounter : MonoBehaviour {
 		FruitValue fv = go.GetComponent<FruitValue> ();
 		if (fv != null) {
 			int value = fv.Value;
+			GameObject clonePointObj = Instantiate(pointObject) as GameObject;
+			Point point = clonePointObj.GetComponent<Point>();
+			point.setPoint(value);
+			timeCounter.plusTime(value/10);
 			score.TotalScore += value;	
 		}
 	}

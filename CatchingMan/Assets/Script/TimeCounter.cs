@@ -3,12 +3,12 @@ using System.Collections;
 
 public class TimeCounter : MonoBehaviour {
 
-	private int gameMaxTime = 10;
+	private int gameMaxTime = 60;
 	private float startTime;
 	private Scene scene;
 
 
-	// Use this for initialization
+	// Use this for initialization 
 	void Start () {
 		scene = GameObject.Find ("Scene").GetComponent<Scene> ();
 		startTime = Time.time;
@@ -36,4 +36,9 @@ public class TimeCounter : MonoBehaviour {
 		int sec = t % 60;
 		guiText.text = min.ToString("00") + ":" + sec.ToString("00");
 	}
+
+	public void plusTime(int t){
+		gameMaxTime += t;
+	}
+
 }
