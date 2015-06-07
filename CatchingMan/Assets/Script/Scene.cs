@@ -3,24 +3,52 @@ using System.Collections;
 
 public class Scene : MonoBehaviour {
 
+	public float interval = 0.75f;
 	public GameObject Wall;
 	public bool levelComplated = false;
 	public bool gameOvered = false;
+	public GameObject[] colors;
 
 	public GameObject[] conditions ;
+	private float startAt;
 
 	// Use this for initialization
 	void Start () {
 
 		SetupWall();
 		chooseCoditionIcons ();
+
+		startAt = Time.time;
 	}
-	
+
+	public void createColor(){
+		float d = Camera.main.orthographicSize * Camera.main.aspect;
+		for(int i=0;i<8;i++){
+			int idx = Random.Range(0,colors.Length);
+			GameObject newObj = Instantiate(colors[idx]) as GameObject;
+
+			float x = Random.Range(- d/2, d/2);
+			float offsetY = Random.Range(-2f,2f);
+			newObj.transform.position = new Vector3(x,Camera.main.orthographicSize+offsetY,0);
+			Vector3 s =  newObj.transform.localScale;
+
+			newObj.transform.localScale = s;
+		}
+	}
+
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.Escape)){
 			Application.Quit();
 		}
+
+		if(this.levelComplated){
+			if((Time.time - startAt)>interval){
+				createColor();
+				startAt = Time.time;
+			}
+		}
+
 	}
 
 	private void SetupWall(){

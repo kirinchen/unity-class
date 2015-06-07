@@ -10,9 +10,11 @@ public class Player : MonoBehaviour {
 	private GameObject bucket;
 	private bool isMoveRight = true;
 	private Animator selfAnimator;
+	private Scene scene;
 
 	// Use this for initialization
 	void Start () {
+		scene = GameObject.Find ("Scene").GetComponent<Scene> ();
 		bucket = GameObject.Find ("woodbucket");
 		selfAnimator = GetComponent<Animator> ();
 	}
@@ -45,7 +47,7 @@ public class Player : MonoBehaviour {
 		float r = transform.rotation.z;
 		r = Mathf.Abs (r);
 		if(r>0.61f){
-			Application.LoadLevel ("GameOver");
+			scene.gameOvered = true;
 		}
 	}
 
@@ -69,9 +71,23 @@ public class Player : MonoBehaviour {
 		Vector3 p3 = new Vector3 (transform.position.x+len,transform.position.y,transform.position.z);
 		float w = (Camera.main.orthographicSize * Camera.main.aspect) - (bucket.renderer.bounds.size.x / 2);
 
-		p3.x = Mathf.Max (p3.x, -w);
-		p3.x = Mathf.Min (p3.x, w);
-		transform.position = p3;
+
+
+		rigidbody2D.AddForce(new Vector2(len*500, 0));
+
+//		p3.x = Mathf.Max (p3.x, -w);
+//		p3.x = Mathf.Min (p3.x, w);
+//		transform.position = p3;
+
+		if(p3.x > w){
+			p3.x = w;
+			transform.position = p3;
+		}
+		if(p3.x < -w){
+			p3.x = -w;
+			transform.position = p3;
+		}
+
 		StartPos = EndPos;
 
 		updateMoveFlag (len);

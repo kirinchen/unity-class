@@ -10,12 +10,15 @@ public class ButtomStickPointCounter : MonoBehaviour {
 
 	private GameObject[] conditions ;
 	public GameObject pointObject;
+	private GameObject lifeBar;
+	private float liftPoint =100;
 
 	// Use this for initialization
 	void Start () {
 		conditions = GameObject.Find ("Scene").GetComponent<Scene> ().conditions;
 		score = GameObject.Find ("Score").GetComponent<Score> ();
 		timeCounter = GameObject.Find ("TimeConter").GetComponent<TimeCounter> ();
+		lifeBar = GameObject.Find ("lifebar_point");
 		
 	}
 	
@@ -85,6 +88,14 @@ public class ButtomStickPointCounter : MonoBehaviour {
 	private void calcScore(GameObject go){
 
 		FruitValue fv = go.GetComponent<FruitValue> ();
+		Bomb b = go.GetComponent<Bomb> ();
+		if(b!=null || fv==null){
+			liftPoint -=20;
+			Vector3 scale = lifeBar.transform.localScale;
+			scale.x = (float)(liftPoint/100f);
+			lifeBar.transform.localScale = scale;
+			throw new UnityException();
+		}
 		if (fv != null) {
 			int value = fv.Value;
 			GameObject clonePointObj = Instantiate(pointObject) as GameObject;

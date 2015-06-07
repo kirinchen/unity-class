@@ -3,7 +3,7 @@ using System.Collections;
 
 public class TimeCounter : MonoBehaviour {
 
-	private int gameMaxTime = 60;
+	private int gameMaxTime = 15;
 	private float startTime;
 	private Scene scene;
 
@@ -19,7 +19,7 @@ public class TimeCounter : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(scene.gameOvered && scene.levelComplated){
+		if(scene.gameOvered || scene.levelComplated){
 			return;
 		}
 		int prieod = (int)(Time.time - startTime);

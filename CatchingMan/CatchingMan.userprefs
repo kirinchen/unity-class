@@ -1,17 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\TimeCounter.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\sexybreakout\SexyBreakout\New Unity Project\Assets\Game 4 - 3D breakout\Scripts\Paddle.cs">
     <Files>
-      <File FileName="Assets\Script\LevelComplete.cs" Line="20" Column="32" />
-      <File FileName="Assets\Script\GameoverLabelController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\TimeCounter.cs" Line="8" Column="22" />
-      <File FileName="Assets\Script\ButtomStickPointCounter.cs" Line="17" Column="60" />
-      <File FileName="Assets\Script\Player.cs" Line="1" Column="1" />
-      <File FileName="Assets\TestScript\TestCollider.cs" Line="1" Column="1" />
-      <File FileName="Assets\TestScript\TestFource.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\Point.cs" Line="20" Column="53" />
-      <File FileName="Assets\Script\Scene.cs" Line="17" Column="3" />
-      <File FileName="Assets\Script\Spawner.cs" Line="49" Column="63" />
+      <File FileName="..\..\sexybreakout\SexyBreakout\New Unity Project\Assets\Standard Assets\Scripts\MeshCombineUtility.cs" Line="175" Column="18" />
+      <File FileName="..\..\sexybreakout\SexyBreakout\New Unity Project\Assets\Game 2 - Jump game\Scripts\Playermovement.cs" Line="11" Column="1" />
+      <File FileName="..\..\sexybreakout\SexyBreakout\New Unity Project\Assets\Game 4 - 3D breakout\Scripts\BreakoutGame.cs" Line="22" Column="45" />
+      <File FileName="..\..\sexybreakout\SexyBreakout\New Unity Project\Assets\Game 4 - 3D breakout\Scripts\Block.cs" Line="1" Column="1" />
+      <File FileName="..\..\sexybreakout\SexyBreakout\New Unity Project\Assets\Game 4 - 3D breakout\Scripts\Paddle.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
